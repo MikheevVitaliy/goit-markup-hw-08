@@ -1,0 +1,49 @@
+main {
+    background-color: #f5f5f5;
+}
+
+.main__section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+    background-color: #fff;
+}
+
+.benefits {
+    margin: 0;
+    display: flex;
+    gap: 30px;
+}
+
+.benefits__container {
+    max-width: 270px;
+    padding: 0;
+}
+
+.benefits__icon {
+    height: 120px;
+    border-radius: 4px;
+    /* padding: 25px 100px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.benefits__title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--title-text-color);
+    margin-top: 0;
+    margin-bottom: 10px;
+    padding-top: 30px;
+}
+
+.benefits__text {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: var(--primari-text-color);
+    margin: 0;
+}

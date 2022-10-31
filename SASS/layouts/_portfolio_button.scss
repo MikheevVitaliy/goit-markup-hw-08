@@ -1,0 +1,64 @@
+.portfolio-main-button {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+}
+
+.section-batton {
+    margin-bottom: 50px;
+}
+
+.galleri-title-text {
+    padding: 20px 24px;
+    border-left: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
+    border-right: 1px solid #eeeeee;
+}
+
+.portfolio .batton {
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.63;
+    text-align: center;
+    letter-spacing: 0.03em;
+    background-color: #f5f4fa;
+    color: var(--title-text-color);
+    cursor: pointer;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    transition-property: background-color, color;
+    transition-duration: 250ms;
+    transition-timing-function: linear;
+    transition-delay: 0ms;
+    &:hover,
+    &:focus {
+        background-color: #2196f3;
+        color: #ffffff;
+    }
+}
+
+.portfolio .batton.all {
+    padding: 6px 25px;
+    min-width: 73px;
+}
+
+.portfolio .batton.websites {
+    padding: 6px 22px;
+    min-width: 125px;
+}
+
+.portfolio .batton.appendices {
+    padding: 6px 22px;
+    min-width: 112px;
+}
+
+.portfolio .batton.design {
+    padding: 6px 22px;
+    min-width: 103px;
+}
+
+.portfolio .batton.marketing {
+    padding: 6px 22px;
+    min-width: 130px;
+}
