@@ -1,3 +1,9 @@
+.directions-min {     
+    @media screen and (max-width: 1199px) {        
+        display: none;
+    }
+}
+
 .directions__title {
     font-weight: 700;
     font-size: 36px;
@@ -6,18 +12,18 @@
     letter-spacing: 0.03em;
     color: var(--title-text-color);
     margin-top: 0;
-    margin-bottom: 50px;
+    margin-bottom: 50px;    
 }
 
 .directions__foto {
-    display: flex;
+    display: flex;    
     gap: 30px;
 }
 
 .directions__blok {
     width: calc((100% - 60px) / 3);
     position: relative;
-    display: block;
+    display: block;    
 }
 
 .directions__img {

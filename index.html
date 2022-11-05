@@ -23,7 +23,7 @@
             <nav class="navigation">
                 <a href="./index.html" class="logo navigation__logo link"><span
                         class="logo__accent">Web</span>Studio</a>
-                <div>
+                <div class="header__container-menu">
                     <ul class="menu">
                         <li class="list">
                             <a href="./index.html" class="menu__link link current">Студія</a>
@@ -33,12 +33,12 @@
                             <a href=" ./portfolio.html" class="menu__link link">Портфоліо</a>
                         </li>
                         <li class="list">
-                            <a href="" class="menu__link link">Контакти</a>
+                            <a href="#contact" class="menu__link link">Контакти</a>
                         </li>
                     </ul>
                 </div>
             </nav>
-            <div>
+            <div class="header__container-menu">
                 <ul class="list contacts">
                     <li class="list">
                         <a class="contacts__mailto link" href="mailto:info@devstudio.com">
@@ -56,7 +56,66 @@
                     </li>
                 </ul>
             </div>
+            <button class="modal-menu-open" type="button" data-menu-open>
+                <svg class="modal-menu__mobile-open" width="40" height="40">
+                    <use href="./images/symbol-defs.svg#icon-menu_mobile"></use>
+                </svg>
+            </button>
         </div>
+        <div class="mob-menu is-hidden" data-menu>
+
+            <button class="modal-menu-close" type="button" data-menu-close>
+                <svg class="modal-menu__mobile-close" width="40" height="40">
+                    <use href="./images/symbol-defs.svg#icon-close_40px"></use>
+                </svg>
+            </button>
+            <div class="modal__container-menu">
+                <div class="">
+                    <ul class="modal-menu">
+                        <li class="list">
+                            <a href="./index.html" class="modal-menu__link link current">Студія</a>
+                        </li>
+                        <li class="list">
+                            <a href=" ./portfolio.html" class="modal-menu__link link">Портфоліо</a>
+                        </li>
+                        <li class="list">
+                            <a href="#contact" class="modal-menu__link link">Контакти</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="modal-container__contacts-soc">
+                    <div class="modal__container-contacts">
+                        <ul class="list modal-contacts">
+                            <li class="list">
+                                <a class="modal-contacts__tel link" href="tel:+380961111111">+38 096 111 11 11</a>
+                            </li>
+                            <li class="list">
+                                <a class="modal-contacts__mailto link"
+                                    href="mailto:info@devstudio.com">info@devstudio.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="modal__container-soc">
+                        <ul class="modal-soc">
+                            <li class="list">
+                                <a class="modal-soc__link" href="">Instagram</a>
+                            </li>
+                            <li class="list">
+                                <a class="modal-soc__link" href="">Twitter</a>
+                            </li>
+                            <li class="list">
+                                <a class="modal-soc__link" href="">Facebook</a>
+                            </li>
+                            <li class="list">
+                                <a class="modal-soc__link" href="">LinkedIn</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
     </header>
 
     <section class="hero hero__container">
@@ -107,7 +166,7 @@
                             Так само консультація з широким активом значною мірою зумовлює.
                         </p>
                     </li>
-                    <li class="list benefits__containert">
+                    <li class="list benefits__container">
                         <div class="benefits__icon background--grin">
                             <svg class="" width="70" height="70">
                                 <use href="./images/symbol-defs.svg#icon-image64"></use>
@@ -124,24 +183,27 @@
         </section>
     </main>
 
-    <section class="section">
+    <section class="section directions-min">
         <div class="container directions">
             <h2 class="directions__title">Чим ми займаємося</h2>
             <ul class="directions__foto list">
                 <li class="directions__blok">
-                    <img class="directions__img" src="./images/image1.1.jpg" alt="Розробка ПЗ" width="370" />
+                    <img srcset="./images/image1.1.jpg 1x, ./images/image1.1_2x.jpg 2x" class="directions__img"
+                        src="./images/image1.1.jpg" alt="Розробка ПЗ" width="370" />
                     <div class="description__blok-text">
                         <p class="description__text">Десктопні додатки</p>
                     </div>
                 </li>
                 <li class="directions__blok">
-                    <img class="directions__img" src="./images/image1.2.jpg" alt="Обробка данних" width="370" />
+                    <img srcset="./images/image1.2.jpg 1x, ./images/image1.2_2x.jpg 2x" class="directions__img"
+                        src="./images/image1.2.jpg" alt="Обробка данних" width="370" />
                     <div class="description__blok-text">
                         <p class="description__text">Мобільні додатки</p>
                     </div>
                 </li>
                 <li class="directions__blok">
-                    <img class="directions__img" src="./images/image1.3.jpg" alt="Дизайн" width="370" />
+                    <img srcset="./images/image1.3.jpg 1x, ./images/image1.3_2x.jpg 2x" class="directions__img"
+                        src="./images/image1.3.jpg" alt="Дизайн" width="370" />
                     <div class="description__blok-text">
                         <p class="description__text">Дизайнерські рішення</p>
                     </div>
@@ -155,7 +217,16 @@
             <h3 class="avatar__title">Наша команда</h3>
             <ul class="list cards-avatar__container">
                 <li class="cards-avatar__item">
-                    <img class="cards-avatar__img" src="./images/image2.1.jpg" alt="Ігор Дем'яненко" width="270" />
+                    <picture>
+                        <source srcset="./images/image2.1.jpg 1x, ./images/image2.1_2x.jpg 2x"
+                            media="(min-width: 1200px" />
+                        <source srcset="./images/image2.1_tablet.jpg 1x, ./images/image2.1_tablet_2x.jpg 2x"
+                            media="(min-width: 768px" />
+                        <source srcset="./images/image2.1_mobile.jpg 1x, ./images/image2.1_mobile_2x.jpg 2x"
+                            media="(max-width: 767px" />
+                        <img class="cards-avatar__img" src="./images/image2.1.jpg" alt="Ігор Дем'яненко" width="270" />
+                    </picture>
+
                     <div class="cards-avatar__desc">
                         <h3 class="cards-avatar__name">Ігор Дем'яненко</h3>
                         <p class="cards-avatar__text">Product Designer</p>
@@ -192,7 +263,16 @@
                     </div>
                 </li>
                 <li class="cards-avatar__item">
-                    <img class="cards-avatar__img" src="./images/image2.2.jpg" alt="Ольга Рєпіна" width="270" />
+                    <picture>
+                        <source srcset="./images/image2.2.jpg 1x, ./images/image2.2_2x.jpg 2x"
+                            media="(min-width: 1200px" />
+                        <source srcset="./images/image2.2_tablet.jpg 1x, ./images/image2.2_tablet_2x.jpg 2x"
+                            media="(min-width: 768px" />
+                        <source srcset="./images/image2.2_mobile.jpg 1x, ./images/image2.2_mobile_2x.jpg 2x"
+                            media="(max-width: 767px" />
+                        <img class="cards-avatar__img" src="./images/image2.2.jpg" alt="Ігор Дем'яненко" width="270" />
+                    </picture>
+                    <!-- <img class="cards-avatar__img" src="./images/image2.2.jpg" alt="Ольга Рєпіна" width="270" /> -->
                     <div class="cards-avatar__desc">
                         <h3 class="cards-avatar__name">Ольга Рєпіна</h3>
                         <p class="cards-avatar__text">Frontend Developer</p>
@@ -229,7 +309,16 @@
                     </div>
                 </li>
                 <li class="cards-avatar__item">
-                    <img class="cards-avatar__img" src="./images/image2.3.jpg" alt="Микола Тарасов" width="270" />
+                    <picture>
+                        <source srcset="./images/image2.3.jpg 1x, ./images/image2.3_2x.jpg 2x"
+                            media="(min-width: 1200px" />
+                        <source srcset="./images/image2.3_tablet.jpg 1x, ./images/image2.3_tablet_2x.jpg 2x"
+                            media="(min-width: 768px" />
+                        <source srcset="./images/image2.3_mobile.jpg 1x, ./images/image2.3_mobile_2x.jpg 2x"
+                            media="(max-width: 767px" />
+                        <img class="cards-avatar__img" src="./images/image2.3.jpg" alt="Ігор Дем'яненко" width="270" />
+                    </picture>
+                    <!-- <img class="cards-avatar__img" src="./images/image2.3.jpg" alt="Микола Тарасов" width="270" /> -->
                     <div class="cards-avatar__desc">
                         <h3 class="cards-avatar__name">Микола Тарасов</h3>
                         <p class="cards-avatar__text">Marketing</p>
@@ -266,7 +355,16 @@
                     </div>
                 </li>
                 <li class="cards-avatar__item">
-                    <img class="cards-avatar__img" src="./images/image2.4.jpg" alt="Михайло Єрмаков" width="270" />
+                    <picture>
+                        <source srcset="./images/image2.4.jpg 1x, ./images/image2.4_2x.jpg 2x"
+                            media="(min-width: 1200px" />
+                        <source srcset="./images/image2.4_tablet.jpg 1x, ./images/image2.4_tablet_2x.jpg 2x"
+                            media="(min-width: 768px" />
+                        <source srcset="./images/image2.4_mobile.jpg 1x, ./images/image2.4_mobile_2x.jpg 2x"
+                            media="(max-width: 767px" />
+                        <img class="cards-avatar__img" src="./images/image2.4.jpg" alt="Ігор Дем'яненко" width="270" />
+                    </picture>
+                    <!-- <img class="cards-avatar__img" src="./images/image2.4.jpg" alt="Михайло Єрмаков" width="270" /> -->
                     <div class="cards-avatar__desc">
                         <h3 class="cards-avatar__name">Михайло Єрмаков</h3>
                         <p class="cards-avatar__text">UI Designer</p>
@@ -307,48 +405,48 @@
     </section>
 
     <section class="section-clients">
-        <div class="container">
-            <h3 class="clients-title">Постійні клієнти</h3>
-            <ul class="container-clients list">
-                <li class="container-clients-icon">
-                    <a class="clients-link" href="">
-                        <svg class="clients-icon" width="106" height="60">
+        <div class="container clients">
+            <h3 class="clients__title">Постійні клієнти</h3>
+            <ul class="clients__container list">
+                <li class="clients-container__icon">
+                    <a class="clients__link" href="">
+                        <svg class="clients__icon" width="106" height="60">
                             <use href="./images/symbol-defs.svg#icon-image51"></use>
                         </svg>
                     </a>
                 </li>
-                <li class="container-clients-icon">
-                    <a class="clients-link" href="">
-                        <svg class="clients-icon" width="106" height="60">
+                <li class="clients-container__icon">
+                    <a class="clients__link" href="">
+                        <svg class="clients__icon" width="106" height="60">
                             <use href="./images/symbol-defs.svg#icon-image52"></use>
                         </svg>
                     </a>
                 </li>
-                <li class="container-clients-icon">
-                    <a class="clients-link" href="">
-                        <svg class="clients-icon" width="106" height="60">
+                <li class="clients-container__icon">
+                    <a class="clients__link" href="">
+                        <svg class="clients__icon" width="106" height="60">
                             <use href="./images/symbol-defs.svg#icon-image53"></use>
                         </svg>
                     </a>
                 </li>
-                <li class="container-clients-icon">
-                    <a class="clients-link" href="">
-                        <svg class="clients-icon" width="106" height="60">
+                <li class="clients-container__icon">
+                    <a class="clients__link" href="">
+                        <svg class="clients__icon" width="106" height="60">
                             <use href="./images/symbol-defs.svg#icon-image54"></use>
                         </svg>
                     </a>
                 </li>
-                <li class="container-clients-icon">
-                    <a class="clients-link" href="">
-                        <svg class="clients-icon" width="106" height="60">
+                <li class="clients-container__icon">
+                    <a class="clients__link" href="">
+                        <svg class="clients__icon" width="106" height="60">
                             <use href="./images/symbol-defs.svg#icon-image55"></use>
                         </svg>
                     </a>
                 </li>
 
-                <li class="container-clients-icon">
-                    <a class="clients-link" href="">
-                        <svg class="clients-icon" width="106" height="60">
+                <li class="clients-container__icon">
+                    <a class="clients__link" href="">
+                        <svg class="clients__icon" width="106" height="60">
                             <use href="./images/symbol-defs.svg#icon-image56"></use>
                         </svg>
                     </a>
@@ -357,7 +455,7 @@
         </div>
     </section>
 
-    <footer class="footer">
+    <footer class="footer" id="contact">
         <div class="container footer-container">
             <div class="footer-address-contacts">
                 <a href="./index.html" class="footer-logo link"><span class="footer-accent">Web</span>Studio</a>
@@ -414,7 +512,7 @@
             <div class="footer-input">
                 <h3 class="footer-title-soc">Підпишіться на розсилку</h3>
                 <div class="footer-input-list list">
-                    <div>
+                    <div class="footer-label-input">
                         <label class="footer-form-label" for="mail"></label>
                         <input class="footer-form-input" type="email" name="mail" id="mail" placeholder="E-mail" />
                     </div>
@@ -484,7 +582,9 @@
             </form>
         </div>
     </div>
+
     <script src="./JS/modal.js"></script>
+    <script src="./JS/menu.js"></script>
 </body>
 
 </html>

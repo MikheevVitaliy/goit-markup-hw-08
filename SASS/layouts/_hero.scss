@@ -1,58 +1,127 @@
 .hero__container {
-    background-color: #2f303a;
-    padding-top: 200px;
-    padding-bottom: 200px;
-    height: 600;
-    max-width: 1600px;
-    margin:0 auto;    
-    background-image: linear-gradient(to right,
+  background-color: #2f303a;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  height: 600;
+  max-width: 1600px;
+  margin: 0 auto;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 40%),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/image4.1_mobile.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .box {
+      background-image: linear-gradient(
+          to right,
+          rgba(47, 48, 58, 40%),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(../images/image4.1_mobile_2x.jpg);
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 40%),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/image4.1_tablet.jpg);
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      .box {
+        background-image: linear-gradient(
+            to right,
             rgba(47, 48, 58, 40%),
-            rgba(47, 48, 58, 0.4)),
-        url(../images/image4.1.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    text-align: center;
+            rgba(47, 48, 58, 0.4)
+          ),
+          url(../images/image4.1_tablet_2x.jpg);
+      }
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 40%),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/image4.1.jpg);
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      .box {
+        background-image: linear-gradient(
+            to right,
+            rgba(47, 48, 58, 40%),
+            rgba(47, 48, 58, 0.4)
+          ),
+          url(../images/image4.1_2x.jpg);
+      }
+    }
+  }
 }
 
 .hero__title {
-    display: inline-block;
-    font-family: Roboto-900;
-    font-weight: 900;
+  display: inline-block;
+  font-family: Roboto-900;
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 1.62;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #ffffff;
+  // margin-top: 0;
+  margin-bottom: 30px;
+  max-width: 366px;
+
+  @media screen and (min-width: 1200px) {
     font-size: 44px;
     line-height: 1.36;
-    text-align: center;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: #ffffff;
-    // margin-top: 0;
-    margin-bottom: 30px;
     max-width: 696px;
+  }
 }
 
 .hero__btn {
-    display: inline-block;
-    font-family: inherit;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.88;
-    align-items: center;
-    text-align: center;
-    letter-spacing: 0.06em;
-    background-color: #2196f3;
-    color: #ffffff;
-    cursor: pointer;
-    border-radius: 4px;
+  display: inline-block;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  background-color: #2196f3;
+  color: #ffffff;
+  cursor: pointer;
+  border-radius: 4px;
+  min-width: 250px;
+  padding: 10px 32px;
+  border: 1px solid transparent;
+  // margin-top: 0;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: linear;
+  transition-delay: 0ms;
+  &:hover,
+  &:focus {
+    background-color: #f88707;
+  }
+
+  @media screen and (min-width: 1200px) {
     min-width: 216px;
-    padding: 10px 32px;
-    border: 1px solid transparent;
-    // margin-top: 0;
-    transition-property: background-color;
-    transition-duration: 250ms;
-    transition-timing-function: linear;
-    transition-delay: 0ms;
-    &:hover,
-    &:focus {
-        background-color: #f88707;
-    }
+  }
 }

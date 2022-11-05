@@ -23,7 +23,7 @@
             <nav class="navigation">
                 <a href="./index.html" class="logo navigation__logo link"><span
                         class="logo__accent">Web</span>Studio</a>
-                <div>
+                <div class="header__container-menu">
                     <ul class="menu">
                         <li class="list">
                             <a href="./index.html" class="menu__link link">Студія</a>
@@ -33,12 +33,12 @@
                             <div class="portfolio-menu__box"></div>
                         </li>
                         <li class="list">
-                            <a href="" class="menu__link link">Контакти</a>
+                            <a href="#contact" class="menu__link link">Контакти</a>
                         </li>
                     </ul>
                 </div>
             </nav>
-            <div>
+            <div class="header__container-menu">
                 <ul class="list contacts">
                     <li class="list">
                         <a class="contacts__mailto link" href="mailto:info@devstudio.com">
@@ -56,6 +56,64 @@
                     </li>
                 </ul>
             </div>
+            <button class="modal-menu-open" type="button" data-menu-open>
+                <svg class="modal-menu__mobile-open" width="40" height="40">
+                    <use href="./images/symbol-defs.svg#icon-menu_mobile"></use>
+                </svg>
+            </button>
+        </div>
+        <div class="mob-menu is-hidden" data-menu>
+
+            <button class="modal-menu-close" type="button" data-menu-close>
+                <svg class="modal-menu__mobile-close" width="40" height="40">
+                    <use href="./images/symbol-defs.svg#icon-close_40px"></use>
+                </svg>
+            </button>
+            <div class="modal__container-menu">
+                <div class="">
+                    <ul class="modal-menu">
+                        <li class="list">
+                            <a href="./index.html" class="modal-menu__link link current">Студія</a>
+                        </li>
+                        <li class="list">
+                            <a href=" ./portfolio.html" class="modal-menu__link link">Портфоліо</a>
+                        </li>
+                        <li class="list">
+                            <a href="#contact" class="modal-menu__link link">Контакти</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="modal-container__contacts-soc">
+                    <div class="modal__container-contacts">
+                        <ul class="list modal-contacts">
+                            <li class="list">
+                                <a class="modal-contacts__tel link" href="tel:+380961111111">+38 096 111 11 11</a>
+                            </li>
+                            <li class="list">
+                                <a class="modal-contacts__mailto link"
+                                    href="mailto:info@devstudio.com">info@devstudio.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="modal__container-soc">
+                        <ul class="modal-soc">
+                            <li class="list">
+                                <a class="modal-soc__link" href="">Instagram</a>
+                            </li>
+                            <li class="list">
+                                <a class="modal-soc__link" href="">Twitter</a>
+                            </li>
+                            <li class="list">
+                                <a class="modal-soc__link" href="">Facebook</a>
+                            </li>
+                            <li class="list">
+                                <a class="modal-soc__link" href="">LinkedIn</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </header>
 
@@ -88,7 +146,19 @@
                         <li class="list container-main-img">
                             <a class="container-link-img link" href="">
                                 <div class="galleri-top-wrap">
-                                    <img class="portfolio-img" src="./images/image3.1.jpg" alt="Веб-сайт" width="370" />
+                                    <picture>
+                                        <source srcset="./images/image3.1.jpg 1x, ./images/image3.1_2x.jpg 2x"
+                                            media="(min-width: 1200px" />
+                                        <source
+                                            srcset="./images/image3.1_tablet.jpg 1x, ./images/image3.1_tablet_2x.jpg 2x"
+                                            media="(min-width: 768px" />
+                                        <source
+                                            srcset="./images/image3.1_mobile.jpg 1x, ./images/image3.1_mobile_2x.jpg 2x"
+                                            media="(max-width: 767px" />
+                                        <img class="portfolio-img" src="./images/image3.1.jpg" alt="Веб-сайт"
+                                            width="370" />
+                                    </picture>
+                                    <!-- <img class="portfolio-img" src="./images/image3.1.jpg" alt="Веб-сайт" width="370" /> -->
                                     <p class="galleri-top-text">
                                         Ресурс пропонує комплексні пропозиції з різним рівнем
                                         функціоналу та сервісів. Все це дозволить відвідувачу
@@ -105,7 +175,19 @@
                         <li class="list container-main-img">
                             <a class="container-link-img link" href="">
                                 <div class="galleri-top-wrap">
-                                    <img class="portfolio-img" src="./images/image3.2.jpg" alt="Веб-сайт" width="370" />
+                                    <picture>
+                                        <source srcset="./images/image3.2.jpg 1x, ./images/image3.2_2x.jpg 2x"
+                                            media="(min-width: 1200px" />
+                                        <source
+                                            srcset="./images/image3.2_tablet.jpg 1x, ./images/image3.2_tablet_2x.jpg 2x"
+                                            media="(min-width: 768px" />
+                                        <source
+                                            srcset="./images/image3.2_mobile.jpg 1x, ./images/image3.2_mobile_2x.jpg 2x"
+                                            media="(max-width: 767px" />
+                                        <img class="portfolio-img" src="./images/image3.2.jpg" alt="Дизайн"
+                                            width="370" />
+                                    </picture>
+                                    <!-- <img class="portfolio-img" src="./images/image3.2.jpg" alt="Дизайн" width="370" /> -->
                                     <p class="galleri-top-text">
                                         Ресурс пропонує комплексні пропозиції з різним рівнем
                                         функціоналу та сервісів. Все це дозволить відвідувачу
@@ -124,7 +206,19 @@
                         <li class="list container-main-img">
                             <a class="container-link-img link" href="">
                                 <div class="galleri-top-wrap">
-                                    <img class="portfolio-img" src="./images/image3.3.jpg" alt="Веб-сайт" width="370" />
+                                    <picture>
+                                        <source srcset="./images/image3.3.jpg 1x, ./images/image3.3_2x.jpg 2x"
+                                            media="(min-width: 1200px" />
+                                        <source
+                                            srcset="./images/image3.3_tablet.jpg 1x, ./images/image3.3_tablet_2x.jpg 2x"
+                                            media="(min-width: 768px" />
+                                        <source
+                                            srcset="./images/image3.3_mobile.jpg 1x, ./images/image3.3_mobile_2x.jpg 2x"
+                                            media="(max-width: 767px" />
+                                        <img class="portfolio-img" src="./images/image3.3.jpg" alt="Додаток"
+                                            width="370" />
+                                    </picture>
+                                    <!-- <img class="portfolio-img" src="./images/image3.3.jpg" alt="Додаток" width="370" /> -->
                                     <p class="galleri-top-text">
                                         Ресурс пропонує комплексні пропозиції з різним рівнем
                                         функціоналу та сервісів. Все це дозволить відвідувачу
@@ -141,7 +235,19 @@
                         <li class="list container-main-img">
                             <a class="container-link-img link" href="">
                                 <div class="galleri-top-wrap">
-                                    <img class="portfolio-img" src="./images/image3.4.jpg" alt="Веб-сайт" width="370" />
+                                    <picture>
+                                        <source srcset="./images/image3.4.jpg 1x, ./images/image3.4_2x.jpg 2x"
+                                            media="(min-width: 1200px" />
+                                        <source
+                                            srcset="./images/image3.4_tablet.jpg 1x, ./images/image3.4_tablet_2x.jpg 2x"
+                                            media="(min-width: 768px" />
+                                        <source
+                                            srcset="./images/image3.4_mobile.jpg 1x, ./images/image3.4_mobile_2x.jpg 2x"
+                                            media="(max-width: 767px" />
+                                        <img class="portfolio-img" src="./images/image3.4.jpg" alt="Маркетинг"
+                                            width="370" />
+                                    </picture>
+                                    <!-- <img class="portfolio-img" src="./images/image3.4.jpg" alt="Маркетинг" width="370" /> -->
                                     <p class="galleri-top-text">
                                         Ресурс пропонує комплексні пропозиції з різним рівнем
                                         функціоналу та сервісів. Все це дозволить відвідувачу
@@ -158,7 +264,19 @@
                         <li class="list container-main-img">
                             <a class="container-link-img link" href="">
                                 <div class="galleri-top-wrap">
-                                    <img class="portfolio-img" src="./images/image3.5.jpg" alt="Веб-сайт" width="370" />
+                                    <picture>
+                                        <source srcset="./images/image3.5.jpg 1x, ./images/image3.5_2x.jpg 2x"
+                                            media="(min-width: 1200px" />
+                                        <source
+                                            srcset="./images/image3.5_tablet.jpg 1x, ./images/image3.5_tablet_2x.jpg 2x"
+                                            media="(min-width: 768px" />
+                                        <source
+                                            srcset="./images/image3.5_mobile.jpg 1x, ./images/image3.5_mobile_2x.jpg 2x"
+                                            media="(max-width: 767px" />
+                                        <img class="portfolio-img" src="./images/image3.5.jpg" alt="Додаток"
+                                            width="370" />
+                                    </picture>
+                                    <!-- <img class="portfolio-img" src="./images/image3.5.jpg" alt="Додаток" width="370" /> -->
                                     <p class="galleri-top-text">
                                         Ресурс пропонує комплексні пропозиції з різним рівнем
                                         функціоналу та сервісів. Все це дозволить відвідувачу
@@ -175,7 +293,19 @@
                         <li class="container-link-img list container-main-img">
                             <a class="link" href="">
                                 <div class="galleri-top-wrap">
-                                    <img class="portfolio-img" src="./images/image3.6.jpg" alt="Веб-сайт" width="370" />
+                                    <picture>
+                                        <source srcset="./images/image3.6.jpg 1x, ./images/image3.6_2x.jpg 2x"
+                                            media="(min-width: 1200px" />
+                                        <source
+                                            srcset="./images/image3.6_tablet.jpg 1x, ./images/image3.6_tablet_2x.jpg 2x"
+                                            media="(min-width: 768px" />
+                                        <source
+                                            srcset="./images/image3.6_mobile.jpg 1x, ./images/image3.6_mobile_2x.jpg 2x"
+                                            media="(max-width: 767px" />
+                                        <img class="portfolio-img" src="./images/image3.6.jpg" alt="Веб-сайт"
+                                            width="370" />
+                                    </picture>
+                                    <!-- <img class="portfolio-img" src="./images/image3.6.jpg" alt="Веб-сайт" width="370" /> -->
                                     <p class="galleri-top-text">
                                         Ресурс пропонує комплексні пропозиції з різним рівнем
                                         функціоналу та сервісів. Все це дозволить відвідувачу
@@ -194,7 +324,19 @@
                         <li class="list container-main-img">
                             <a class="container-link-img link" href="">
                                 <div class="galleri-top-wrap">
-                                    <img class="portfolio-img" src="./images/image3.7.jpg" alt="Веб-сайт" width="370" />
+                                    <picture>
+                                        <source srcset="./images/image3.7.jpg 1x, ./images/image3.7_2x.jpg 2x"
+                                            media="(min-width: 1200px" />
+                                        <source
+                                            srcset="./images/image3.7_tablet.jpg 1x, ./images/image3.7_tablet_2x.jpg 2x"
+                                            media="(min-width: 768px" />
+                                        <source
+                                            srcset="./images/image3.7_mobile.jpg 1x, ./images/image3.7_mobile_2x.jpg 2x"
+                                            media="(max-width: 767px" />
+                                        <img class="portfolio-img" src="./images/image3.7.jpg" alt="Дизайн"
+                                            width="370" />
+                                    </picture>
+                                    <!-- <img class="portfolio-img" src="./images/image3.7.jpg" alt="Дизайн" width="370" /> -->
                                     <p class="galleri-top-text">
                                         Ресурс пропонує комплексні пропозиції з різним рівнем
                                         функціоналу та сервісів. Все це дозволить відвідувачу
@@ -211,7 +353,19 @@
                         <li class="list container-main-img">
                             <a class="container-link-img link" href="">
                                 <div class="galleri-top-wrap">
-                                    <img class="portfolio-img" src="./images/image3.8.jpg" alt="Веб-сайт" width="370" />
+                                    <picture>
+                                        <source srcset="./images/image3.8.jpg 1x, ./images/image3.8_2x.jpg 2x"
+                                            media="(min-width: 1200px" />
+                                        <source
+                                            srcset="./images/image3.8_tablet.jpg 1x, ./images/image3.8_tablet_2x.jpg 2x"
+                                            media="(min-width: 768px" />
+                                        <source
+                                            srcset="./images/image3.8_mobile.jpg 1x, ./images/image3.8_mobile_2x.jpg 2x"
+                                            media="(max-width: 767px" />
+                                        <img class="portfolio-img" src="./images/image3.8.jpg" alt="Маркетинг"
+                                            width="370" />
+                                    </picture>
+                                    <!-- <img class="portfolio-img" src="./images/image3.8.jpg" alt="Маркетинг" width="370" /> -->
                                     <p class="galleri-top-text">
                                         Ресурс пропонує комплексні пропозиції з різним рівнем
                                         функціоналу та сервісів. Все це дозволить відвідувачу
@@ -228,7 +382,19 @@
                         <li class="list container-main-img">
                             <a class="container-link-img link" href="">
                                 <div class="galleri-top-wrap">
-                                    <img class="portfolio-img" src="./images/image3.9.jpg" alt="Веб-сайт" width="370" />
+                                    <picture>
+                                        <source srcset="./images/image3.9.jpg 1x, ./images/image3.9_2x.jpg 2x"
+                                            media="(min-width: 1200px" />
+                                        <source
+                                            srcset="./images/image3.9_tablet.jpg 1x, ./images/image3.9_tablet_2x.jpg 2x"
+                                            media="(min-width: 768px" />
+                                        <source
+                                            srcset="./images/image3.9_mobile.jpg 1x, ./images/image3.9_mobile_2x.jpg 2x"
+                                            media="(max-width: 767px" />
+                                        <img class="portfolio-img" src="./images/image3.9.jpg" alt="Додаток"
+                                            width="370" />
+                                    </picture>
+                                    <!-- <img class="portfolio-img" src="./images/image3.9.jpg" alt="Додаток" width="370" /> -->
                                     <p class="galleri-top-text">
                                         Ресурс пропонує комплексні пропозиції з різним рівнем
                                         функціоналу та сервісів. Все це дозволить відвідувачу
@@ -301,8 +467,26 @@
                     </li>
                 </ul>
             </div>
+            <div class="footer-input" id="contact">
+                <h3 class="footer-title-soc">Підпишіться на розсилку</h3>
+                <div class="footer-input-list list">
+                    <div class="footer-label-input">
+                        <label class="footer-form-label" for="mail"></label>
+                        <input class="footer-form-input" type="email" name="mail" id="mail" placeholder="E-mail" />
+                    </div>
+                    <div class="footer-button">
+                        <button class="footer-form-button" type="submit">
+                            Підписатися
+                        </button>
+                        <svg class="footer-input-icon" width="24" height="24">
+                            <use href="./images/symbol-defs.svg#icon-icon-send"></use>
+                        </svg>
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
+    <script src="./JS/menu.js"></script>
 </body>
 
 </html>
