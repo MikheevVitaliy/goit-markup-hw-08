@@ -79,6 +79,12 @@ main.portfolio {
   padding-top: 94px;
   padding-bottom: 94px;
 }
+@media screen and (max-width: 1199px) {
+  main.portfolio {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
 @media screen and (max-width: 477px) {
   main.portfolio {
     margin: 0 auto;
@@ -406,7 +412,7 @@ body {
 .logo__accent:focus {
   color: #f88707; 
 } */
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 767px) {
   .header__container-menu {
     display: none;
   }
@@ -466,7 +472,7 @@ body {
   .contacts {
     flex-direction: column;
     gap: 10px;
-    margin-left: 96px;
+    margin-left: 93px;
   }
 }
 
@@ -490,6 +496,12 @@ body {
   color: #2196f3;
   fill: #2196f3;
 }
+@media screen and (max-width: 1199px) {
+  .contacts__mailto,
+.contacts__tel {
+    font-size: 12px;
+  }
+}
 
 .header__icon {
   margin-right: 10px;
@@ -510,7 +522,7 @@ body {
 .modal-menu-open:hover, .modal-menu-open:focus {
   fill: #2196f3;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 768px) {
   .modal-menu-open {
     display: none;
   }
@@ -658,6 +670,12 @@ body {
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .hero__container .box {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/image4.1_2x.jpg);
+  }
+}
+@media screen and (max-width: 1199px) {
+  .hero__container {
+    padding-top: 118px;
+    padding-bottom: 118px;
   }
 }
 
@@ -836,7 +854,7 @@ main {
   line-height: 1.14;
   text-align: center;
   letter-spacing: 0.03em;
-  /* text-transform: uppercase; */
+  text-transform: uppercase;
   color: #ffffff;
 }
 
@@ -1008,7 +1026,7 @@ main {
 
 .clients-container__icon {
   padding: 0;
-  margin: 0 auto;
+  margin: 0;
   width: 100%;
 }
 @media screen and (min-width: 480px) {
@@ -1408,7 +1426,7 @@ main {
   -moz-column-gap: 30px;
        column-gap: 30px;
   row-gap: 30px;
-  justify-content: center;
+  justify-content: start;
 }
 
 .portfolio .section-title-img {

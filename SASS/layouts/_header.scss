@@ -67,7 +67,7 @@
 } */
 
 .header__container-menu {
-  @media screen and (max-width: 479px) {
+  @media screen and (max-width: 767px) {
     display: none;
     // visibility: hidden;
   }
@@ -104,6 +104,8 @@
   &:focus {
     color: #2196f3;
   }
+
+    
 }
 
 .menu__link.current {
@@ -127,7 +129,7 @@
   @media screen and (max-width: 1199px) {
     flex-direction: column;
     gap: 10px;
-    margin-left: 96px;
+    margin-left: 93px;
   }
 }
 
@@ -149,6 +151,10 @@
     color: #2196f3;
     fill: #2196f3;
   }
+
+    @media screen and (max-width: 1199px) {
+      font-size: 12px;
+    }
 }
 
 .header__icon {
@@ -171,7 +177,7 @@
     fill: #2196f3;
   }
 
-  @media screen and (min-width: 480px) {
+  @media screen and (min-width: 768px) {
       display: none;
   }
 }
