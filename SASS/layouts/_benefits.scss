@@ -55,6 +55,11 @@ main {
   margin-top: 0;
   margin-bottom: 10px;
   padding-top: 30px;
+
+  @media screen and (max-width: 767px) {
+      text-align: center;
+    }
+  
 }
 
 .benefits__text {
